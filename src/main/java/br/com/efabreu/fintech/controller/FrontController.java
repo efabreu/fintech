@@ -1,5 +1,8 @@
 package br.com.efabreu.fintech.controller;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,8 +24,19 @@ public class FrontController {
 	
 	@GetMapping("/")
 	public ModelAndView index() {
+		
 		ModelAndView mv = new ModelAndView("index");
-		mv.setViewName("ordensdeservico/index");		
+		InetAddress ip;
+		try {
+			ip = InetAddress.getLocalHost();
+			mv.addObject("endereco", ip.getHostAddress());
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		};
+		mv.addObject("id", 1L);
+		
+		mv.setViewName("index");		
 		return mv;
 
 	}

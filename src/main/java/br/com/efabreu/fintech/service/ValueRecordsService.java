@@ -40,6 +40,11 @@ public class ValueRecordsService {
 		ValueRecords vr = recordRepository.findById(recordId).orElseThrow();
 		return vr;
 	}
+	
+	public List<ValueRecords> findAllRecordsByUserId(Long recordId) {
+		List<ValueRecords> list = recordRepository.buscarMeusRegistros(recordId);
+		return list;
+	}
 
 	public ValueRecords getById(Long id) {
 		// TODO Auto-generated method stub

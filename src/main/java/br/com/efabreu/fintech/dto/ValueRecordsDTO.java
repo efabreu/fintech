@@ -1,18 +1,10 @@
 package br.com.efabreu.fintech.dto;
 
-import java.io.Serializable;
-import java.util.Date;
-import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.util.Date;
 
 import br.com.efabreu.fintech.model.ValueRecords;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
-@Entity
 public class ValueRecordsDTO {
 
 	

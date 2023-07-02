@@ -25,6 +25,19 @@
 <body>
     <div th:replace= "Pages/Fragments/header :: header"></div> 
     <h1>Registros de entradas e saídas</h1>
+    <div id="anosRegistros">
+            
+    </div>
+    <div id="registros">
+            
+    </div>
     <div th:replace= "Pages/Fragments/footer :: footer"></div>
+
+
+    <script type="text/javascript" th:inline="javascript">
+    var enderecoIp = [[${endereco}]];
+    var idUsuario = [[${id}]];
+    </script>
+    <script type="text/javascript" th:src="@{/JS/registros.js}"></script>
 </body>
 </html>
