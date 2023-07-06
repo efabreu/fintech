@@ -40,5 +40,15 @@ public class FrontController {
 		return mv;
 
 	}
+	
+	@GetMapping("/em-breve")
+	public ModelAndView emBreve() {
+		
+		ModelAndView mv = new ModelAndView("embreve");
+
+		mv.setViewName("Pages/embreve");		
+		return mv;
+
+	}
 
 }

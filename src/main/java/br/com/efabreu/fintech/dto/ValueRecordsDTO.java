@@ -1,6 +1,8 @@
 package br.com.efabreu.fintech.dto;
 
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import br.com.efabreu.fintech.model.ValueRecords;
@@ -13,7 +15,7 @@ public class ValueRecordsDTO {
 	private String descricao;
 	private boolean tipo;
 	private String valor;
-	private Date data;
+	private String data;
 	
 
 	/**
@@ -33,7 +35,7 @@ public class ValueRecordsDTO {
 	  *        
 	  * @return objeto ValueRecordsDTO
 	  */
-	public ValueRecordsDTO(Long userId, String descricao, boolean tipo, String valor, Date data) {
+	public ValueRecordsDTO(Long userId, String descricao, boolean tipo, String valor, String data) {
 		super();
 		this.userId = userId;
 		this.descricao = descricao;
@@ -71,15 +73,23 @@ public class ValueRecordsDTO {
 	public void setValor(String valor) {
 		this.valor = valor;
 	}
-	public Date getData() {
+	public String getData() {
 		return data;
 	}
-	public void setData(Date data) {
+	public void setData(String data) {
 		this.data = data;
 	}
 
 	public ValueRecords toObject() {
-		return new ValueRecords(descricao, tipo, valor, data);
+		SimpleDateFormat formatoDataBanco = new SimpleDateFormat("yyyy-MM-dd");
+		Date diaDate = null;
+		try {
+			diaDate = formatoDataBanco.parse(data);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return new ValueRecords(descricao, tipo, valor, diaDate);
 	}
 	
 

@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body{
+	width: 90%;
+}
+
+
+
+#anosRegistros {
+
+    display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px 0;
+    
+}
+
+span.icon-square {
+    margin: 0 auto;
+}
+
+span.icon-square:first-child {
+    margin-left: 0;
+}
+
+span.icon-square:last-child {
+    margin-right: 0;
+}
+
+button {
+	padding: 5px 10px;
+}
+
+
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:36px;
+}
+
+.registros * {
+
+    left: -500px;
+    transform: translateX(50px);
+    padding: 10px;
+
+}
+
+/* calculadora flutuante
+
+
+.floating-button-div {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  
+  .fb {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  } */
+
+/* collapsible form novo registro */
+
+.collapsible {
+  background-color: #d6ffdf;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #66f385;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+
+
+*,
+*::before {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+
+/* calculadora
+
+calculadora {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#calculator {
+    width: 90%;
+    max-width: 430px;
+    padding: 25px;
+    border-radius: 25px;
+    background: linear-gradient(to bottom right, #404040, #0c0c0c);
+}
+
+
+#input-wrap {
+    position: relative;
+    width: calc(100% - 4px);
+    margin-bottom: 5px;
+    padding: 0 5px;
+    background: #a1bd66;
+    text-align: right;
+    box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+#input {
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+}
+
+#tmp {
+    position: absolute;
+    right: 5px;
+    top: 0.25rem;
+    color: grey;
+}
+
+
+#button-wrap {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#button-wrap > button {
+    width: calc(25% - 4px);
+    text-align: center;
+    line-height: 5rem;
+    margin: 2px 0;
+    background: grey;
+    color: #f1f1f1;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    outline: 0;
+    transition: 0.3s;
+}
+
+#button-wrap > button.num-0 {
+    width: calc(50% - 4px);
+}
+
+#button-wrap > button.number {
+    background: #5d5d5f;
+}
+
+#button-wrap > button:hover {
+    box-shadow: inset 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+#button-wrap > button#result {
+    background: #f55530;
+} */
+
+/* ========================== table ===========================*/
+
+/* ========================== formato 2 ===========================*/
+.tabela {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabela td, .tabela th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.tabela tr:nth-child(even){background-color: #f2f2f2;}
+
+.tabela tr:hover {background-color: #ddd;}
+
+.tabela th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+
+

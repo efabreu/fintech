@@ -3,32 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>h</title>
 </head>
-<body>
+<body >
     <header th:fragment = "header">
 	
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <img  src= "/assets/ic_launcher.ico">
+        <img  src= "/assets/ic_launcher.png" width="30" height="30">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link" aria-current="page" th:href="@{/gerenciamento/acompanhamento-diario}">Acompanhamento Diário</a>
+            <a class="nav-link" aria-current="page" th:href="@{/home/}">Controle Financeiro</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" th:href="@{/gerenciamento/buscar-oss-abertas}">Relatório de OSs Abertas</a>
+            <a class="nav-link" th:href="@{/home/em-breve}">Investimentos</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" th:href="@{/home/em-breve}">Bem estar financeiro</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" th:href="@{/home/em-breve}">Dicas</a>
             </li>
             
         </ul>
-        <form class="d-flex" method="get" th:action="@{buscar-os}">
-            <input class="form-control me-2" type="text" pattern="[0-9]*" maxlength="6" name="ordemServico" placeholder="Número da OS" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
+       
         </div>
     </div>
     </nav>

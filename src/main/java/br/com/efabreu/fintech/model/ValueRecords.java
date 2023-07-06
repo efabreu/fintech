@@ -6,6 +6,7 @@ import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,6 +22,7 @@ public class ValueRecords implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "VALUE_ID")
 	@JsonIgnore
     private Long valueId;
 	
@@ -62,6 +64,7 @@ public class ValueRecords implements Serializable{
 	}
 	public ValueRecords(String descricao, boolean tipo, String valor, Date data) {
 		super();
+		this.userId = 1L;
 		this.descricao = descricao;
 		this.tipo = tipo;
 		this.valor = valor;

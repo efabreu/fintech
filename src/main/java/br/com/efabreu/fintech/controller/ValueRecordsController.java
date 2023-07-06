@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -35,7 +36,7 @@ public class ValueRecordsController {
 	
 	
 	@PostMapping(value = "/")
-	public ResponseEntity<String> criarRegistro(@RequestBody ValueRecordsDTO registroDTO) {
+	public ResponseEntity<String> criarRegistro(@ModelAttribute ValueRecordsDTO registroDTO) {
 		valueRecordsService.create(registroDTO);
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body("Registro criado com sucesso.");
