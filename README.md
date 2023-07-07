@@ -10,6 +10,7 @@ Instruções para teste:
 - Abrir o “Prompt de comando”;
 
 - Executar o comando “java -version”
+  
 ![pasted image 0](https://github.com/efabreu/fintech/assets/95862044/a461c572-f1de-4b5a-8f28-a3e0779f2988)
 
 - Baixar o arquivo “fintech-spring-mvc-0.0.1-SNAPSHOT.jar”
